@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">MaterialDesign</string>
+    <string name="username">Enter your username</string>
+    <string name="address">Enter your address</string>
+    <string name="contact">Enter your contact</string>
+    <string name="password">Enter your password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="button_register">Register</string>
+    <string name="registration_form">Registration Form</string>
+    <string name="please_fill_in_all_the_fields">Please fill in all the fields</string>
+    <string name="female">Female</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="have_account_login">Have Account | Login</string>
+
+
+</resources>
