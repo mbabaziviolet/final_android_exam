@@ -11,7 +11,21 @@
     <string name="female">Female</string>
     <string name="gender">Gender</string>
     <string name="male">Male</string>
+    <string name="login">LOGIN</string>
     <string name="have_account_login">Have Account | Login</string>
+    <string name="email">Enter your email</string>
+    <string name="password_">Enter your password</string>
+    <string name="don_t_have_account_register">Don\'t Have Account | Register</string>
+    <string name="hostels">Hostels</string>
+    <string name="rooms_prices">Rooms Prices</string>
+    <string name="hostel_name">Hostel name</string>
+    <string name="send_book_message">Send Book Message</string>
+    <string name="make_room_payment">Make Room Payment</string>
+    <string name="thanks_for_logging_in_your_most_welcome">Thanks for logging in | Your most welcome</string>
+    <string name="add">add</string>
+    <string name="delete">delete</string>
+    <string name="register_with_know_tech_app">Register with Know-Tech App</string>
+    <string name="thanks_for_logging_in_your_most_welcome_to_know_tech_app">Thanks For Logging In | Your most welcome to Know-Tech App</string>
 
 
 </resources>
