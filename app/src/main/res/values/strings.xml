@@ -26,6 +26,8 @@
     <string name="delete">delete</string>
     <string name="register_with_know_tech_app">Register with Know-Tech App</string>
     <string name="thanks_for_logging_in_your_most_welcome_to_know_tech_app">Thanks For Logging In | Your most welcome to Know-Tech App</string>
+    <string name="login_with">Login With</string>
+    <string name="know_tech_app">Know-Tech App</string>
 
 
 </resources>

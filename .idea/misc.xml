@@ -5,12 +5,18 @@
       <map>
         <entry key="..\:/Users/mbabazi/AndroidStudioProjects/SignUpMaterial/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/mbabazi/AndroidStudioProjects/SignUpMaterial/app/src/main/res/layout/add.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/mbabazi/AndroidStudioProjects/SignUpMaterial/app/src/main/res/layout/admin_dashboard.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/mbabazi/AndroidStudioProjects/SignUpMaterial/app/src/main/res/layout/home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/mbabazi/AndroidStudioProjects/SignUpMaterial/app/src/main/res/layout/menu_activity.xml" value="0.10371376811594203" />
         <entry key="..\:/Users/mbabazi/AndroidStudioProjects/SignUpMaterial/app/src/main/res/layout/second_layout.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/mbabazi/AndroidStudioProjects/SignUpMaterial/app/src/main/res/layout/sign_up_form.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/mbabazi/AndroidStudioProjects/SignUpMaterial/app/src/main/res/layout/signup_form.xml" value="0.1" />
+        <entry key="..\:/Users/mbabazi/AndroidStudioProjects/SignUpMaterial/app/src/main/res/layout/student_activity.xml" value="0.1" />
+        <entry key="..\:/Users/mbabazi/AndroidStudioProjects/SignUpMaterial/app/src/main/res/layout/student_chartroom.xml" value="0.1" />
+        <entry key="..\:/Users/mbabazi/AndroidStudioProjects/SignUpMaterial/app/src/main/res/layout/student_course.xml" value="0.1" />
         <entry key="..\:/Users/mbabazi/AndroidStudioProjects/SignUpMaterial/app/src/main/res/layout/test.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/mbabazi/AndroidStudioProjects/SignUpMaterial/app/src/main/res/layout/welcome.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/mbabazi/AndroidStudioProjects/SignUpMaterial/app/src/main/res/menu/menu.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>
