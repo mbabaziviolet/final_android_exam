@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@color/white"
-    tools:context=".SignUpForm">
+    tools:context=".RegisterAdmin">
 
 
     <ScrollView
@@ -22,9 +22,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/registration_form"
+                android:text="Admin_form"
                 android:layout_marginLeft="30dp"
-                android:layout_marginTop="30dp"
                 android:textColor="@color/black"
                 android:gravity="center"
                 android:textSize="30sp"/>
@@ -44,8 +43,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:inputType="text"
-                    android:id="@+id/user_name"
-                    android:hint="@string/username"
+                    android:id="@+id/name"
+                    android:hint="name"
                     android:maxLines="3"
                     />
 
@@ -59,8 +58,8 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/address_1"
-                    android:hint="@string/email"
+                    android:id="@+id/email1"
+                    android:hint="Enter your email"
                     android:layout_width="match_parent"
                     android:inputType="textEmailAddress"
                     android:layout_height="wrap_content"
@@ -121,14 +120,27 @@
                     android:layout_marginEnd="50dp"
                     android:layout_marginBottom="50dp"
                     android:padding="8dp"
-                    android:text="@string/button_register"
+                    android:text="register_admin"
+                    android:textSize="20sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/admin_Login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="105dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginBottom="50dp"
+                    android:padding="8dp"
+                    android:text="have_account"
                     android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/text_login"
+                    android:id="@+id/text_loginad"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="90dp"
+                    android:layout_marginTop="160dp"
                     android:gravity="center"
                     android:text="@string/have_account_login"
                     android:textColor="@color/black"
@@ -139,3 +151,37 @@
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

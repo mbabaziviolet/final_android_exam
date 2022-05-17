@@ -52,10 +52,10 @@ public class SignUpForm extends Activity {
                 }
                 if (conf.isEmpty()) {
                     conf_pass.setError("Please confirm your password");
-                }
-                if (pass != conf) {
 
-                    conf_pass.setError("Passwords don't match");
+//                if (pass != conf) {
+//
+//                    conf_pass.setError("Passwords don't match");
 
                 } else{
                     intent = new Intent(getApplicationContext(),MainActivity.class);

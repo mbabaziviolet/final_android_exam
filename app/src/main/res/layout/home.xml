@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Home">
 
     <TextView
@@ -12,8 +13,18 @@
         android:layout_marginLeft="30dp"
         android:textSize="30sp"
         android:layout_marginTop="30dp"
-        android:text="@string/thanks_for_logging_in_your_most_welcome"/>
+        android:text="Your_most_welcome"/>
 
 
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Student"
+    android:id="@+id/pagestudent"/>
 
-</FrameLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Admin"
+        android:id="@+id/pageadmin"/>
+</LinearLayout>

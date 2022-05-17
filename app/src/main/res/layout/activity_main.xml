@@ -22,13 +22,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/tv5"
-                android:textSize="18sp"
-                android:text="Login Form"
-                android:layout_marginTop="20dp"
+                android:textSize="25sp"
+                android:layout_marginLeft="50dp"
+                android:text="Student Login Form"
+                android:textColor="@color/black"
+                android:layout_marginTop="30dp"
 
                 />
-
-
 
             <com.google.android.material.textfield.TextInputLayout
                 app:boxBackgroundColor="@color/white"
@@ -38,7 +38,23 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/email1"
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:hint="Name"
+                    android:maxLines="3" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                app:boxBackgroundColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/reg1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="number"
@@ -92,6 +108,19 @@
                     android:text="@string/don_t_have_account_register"
                     android:textColor="@color/black"
                     android:textSize="23sp" />
+
+
+                <TextView
+                    android:id="@+id/toadminpage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="70dp"
+                    android:gravity="center"
+                    android:text="Admin"
+           android:layout_below="@+id/btn_log"
+                    android:textColor="@color/black"
+                    android:textSize="23sp" />
+
 
             </RelativeLayout>
         </LinearLayout>

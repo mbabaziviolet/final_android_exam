@@ -20,6 +20,10 @@
         </activity>
         <activity android:name=".SignUpForm"/>
         <activity android:name=".WelcomeActivity"/>
+        <activity android:name=".LoginAdmin"/>
+        <activity android:name=".RegisterAdmin"/>
+        <activity android:name=".Home"/>
+
 
 
     </application>

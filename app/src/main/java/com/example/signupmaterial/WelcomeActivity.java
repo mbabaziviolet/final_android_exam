@@ -19,57 +19,40 @@ import android.widget.TextView;
 
 public class WelcomeActivity extends Activity {
 
-    TextView tv2,tv5;
-    Button btn3,btn4;
-    ListView listView; //declaration
-    String[] names={"Android Development","Web Development","Data Science","Python Programming","Machine Learning","React"};
-    ArrayAdapter<String > arrayAdapter;
+    Button btn3, btn4;
+    Intent intent,intent_1;
 
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.welcome);
 
 
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.welcome);
-            //assign listview variable to a value
-            listView = (ListView) findViewById(R.id.listView);
-            tv2 = (TextView) findViewById(R.id.tv2);
-            tv5 = (TextView) findViewById(R.id.tv5);
-            btn3 =(Button) findViewById(R.id.btn3);
-            btn4 =(Button) findViewById(R.id.btn4);
-
-            arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,names);
-            listView.setAdapter(arrayAdapter);
-        }
+        btn3 = (Button) findViewById(R.id.btn3);
+        btn4 = (Button) findViewById(R.id.btn4);
 
 
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent_1 = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent_1);
 
-        @Override
-        public boolean onCreateOptionsMenu(Menu menu) {
+            }
+        });
 
-            getMenuInflater().inflate(R.menu.menu,menu);
-            MenuItem menuItem =menu.findItem(R.id.menu_search);
-            SearchView searchView = (SearchView) menuItem.getActionView();
-            searchView.setQueryHint("Type here to search");
-            searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-                @Override
-                public boolean onQueryTextSubmit(String query) {
-                    return false;
-                }
-
-                @Override
-                public boolean onQueryTextChange(String newText) {
-                    arrayAdapter.getFilter().filter(newText);
-                    return false;
-                }
-            });
-            return super.onCreateOptionsMenu(menu);
-        }
+        btn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
 
 
+        });
     }
-
+}
 
 
 

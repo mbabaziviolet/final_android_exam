@@ -20,23 +20,6 @@
         />
 
 
-    <ListView
-        android:id="@+id/listView"
-        android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:dividerHeight="2dp"
-        android:listSelector="@android:color/holo_blue_bright"
-        tools:ignore="missingConstraints" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv5"
-        android:textSize="18sp"
-        android:text="Chat Room"
-        android:layout_marginTop="20dp"
-
-        />
 
 
     <Button
@@ -53,7 +36,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="24dp"
-        android:text="Update"
+        android:text="Student Registration"
         android:layout_marginTop="30dp" />
 
 

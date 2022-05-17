@@ -8,28 +8,32 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DBHelper extends SQLiteOpenHelper {
     public  DBHelper( Context context){
-        super(context,"Userdata.db",null,1);
+        super(context,"Usersdata.db",null,1);
     }
     @Override
     public  void onCreate(SQLiteDatabase DB){
-        DB.execSQL("create Table Userdetails(name TEXT primary key, contact TEXT,dob TEXT)");
+        DB.execSQL("create Table studentdetails(name TEXT primary key, regno INT,email TEXT,username TEXT,password TEXT NOT NULL)");
+        DB.execSQL(" CREATE TABLE admin(email TEXT primary key UNIQUE NOT NULL,name TEXT,password TEXT NOT NULL)");
 
     }
 
 
     @Override
     public void onUpgrade(SQLiteDatabase DB, int i, int i1){
-        DB.execSQL("drop Table if exists Userdetails");
+        DB.execSQL("drop Table if exists studentdetails");
+        DB.execSQL("drop Table if exists admin");
+
 
     }
-    public Boolean insertuserdata(String name,String contact, String dob)
+
+    public Boolean RegisterAdmin(String email,String name, String password)
     {
         SQLiteDatabase DB=this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
+        contentValues.put("email",email);
         contentValues.put("name",name);
-        contentValues.put("contact",contact);
-        contentValues.put("dob",dob);
-        long result=DB.insert("Userdetails",null,contentValues);
+        contentValues.put("assword",password);
+        long result=DB.insert("admin",null,contentValues);
         if(result==-1) {
             return false;
         }else{
@@ -37,57 +41,123 @@ public class DBHelper extends SQLiteOpenHelper {
         }
 
     }
-    public Boolean updateuserdata(String name,String contact, String dob)
+    public Boolean SignUpForm(String name,String regno, String email, String username, String password)
     {
         SQLiteDatabase DB=this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put("contact",contact);
-        contentValues.put("dob",dob);
-        Cursor cursor = DB.rawQuery("select * from Userdetails where name=?",new String[] {name});
-        if(cursor.getCount()>0) {
-            long result = DB.update("Userdetails", contentValues, "name=?", new String[]{name});
-            if (result == -1) {
-                return false;
-            } else {
-                return true;
-            }
-        }else
-        {
-            return  false;
-        }
-
-    }
+        contentValues.put("name",name);
+        contentValues.put("regno",regno);
+        contentValues.put("email",email);
+        contentValues.put("username",username);
+        contentValues.put("password",password);
 
 
-    public Boolean deletedata(String name)
-    {
-        SQLiteDatabase DB=this.getWritableDatabase();
-        Cursor cursor = DB.rawQuery("select * from Userdetails where name=?",new String[] {name});
-        if(cursor.getCount()>0) {
-            long result = DB.delete("Userdetails", "name=?", new String[]{name});
-            if (result == -1) {
-                return false;
-            } else {
-                return true;
-            }
-        }else
-        {
-            return  false;
+
+        long result=DB.insert("studentdetails",null,contentValues);
+        if(result==-1) {
+            return false;
+        }else{
+            return true;
         }
 
     }
 
 
 
-    public Cursor getdata()
-    {
-        SQLiteDatabase DB=this.getWritableDatabase();
-        Cursor cursor = DB.rawQuery("select * from Userdetails", null);
-        return cursor;
+    public Boolean checkAdminName(String name) {
+        SQLiteDatabase db = getWritableDatabase();
+        Cursor cursor = db.rawQuery("SELECT  * FROM admin WHERE name = ? ", new String[] {name} );
+        if(cursor.getCount()>0){
+            return  true;
+        }
+        else{
+            return false;
+        }
 
+    }
 
+    public Boolean checkAminEmail(String email) {
+        SQLiteDatabase db = getWritableDatabase();
+        Cursor cursor = db.rawQuery("SELECT  * FROM admin WHERE email = ? ", new String[] {email} );
+        if(cursor.getCount()>0){
+            return  true;
+        }
+        else{
+            return false;
+        }
+
+    }
+
+    public Boolean checkAdminAuth(String email,String password) {
+        SQLiteDatabase db = getWritableDatabase();
+        Cursor cursor = db.rawQuery("SELECT  * FROM admin WHERE email = ? AND password =?", new String[] {email,password} );
+        if(cursor.getCount()>0){
+            return  true;
+        }
+        else{
+            return false;
+        }
+
+    }
     }
 
 
 
-}
+
+
+
+
+//    public Boolean updateuserdata(String name,String contact, String dob)
+//    {
+//        SQLiteDatabase DB=this.getWritableDatabase();
+//        ContentValues contentValues = new ContentValues();
+//        contentValues.put("contact",contact);
+//        contentValues.put("dob",dob);
+//        Cursor cursor = DB.rawQuery("select * from Userdetails where name=?",new String[] {name});
+//        if(cursor.getCount()>0) {
+//            long result = DB.update("Userdetails", contentValues, "name=?", new String[]{name});
+//            if (result == -1) {
+//                return false;
+//            } else {
+//                return true;
+//            }
+//        }else
+//        {
+//            return  false;
+//        }
+//
+//    }
+//
+
+//    public Boolean deletedata(String name)
+//    {
+//        SQLiteDatabase DB=this.getWritableDatabase();
+//        Cursor cursor = DB.rawQuery("select * from Userdetails where name=?",new String[] {name});
+//        if(cursor.getCount()>0) {
+//            long result = DB.delete("Userdetails", "name=?", new String[]{name});
+//            if (result == -1) {
+//                return false;
+//            } else {
+//                return true;
+//            }
+//        }else
+//        {
+//            return  false;
+//        }
+//
+//    }
+//
+//
+//
+//    public Cursor getdata()
+//    {
+//        SQLiteDatabase DB=this.getWritableDatabase();
+//        Cursor cursor = DB.rawQuery("select * from Userdetails", null);
+//        return cursor;
+
+
+
+
+
+
+
